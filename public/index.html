@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="app.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.2/socket.io.js"
+      defer
+    ></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div id="appContainer" class="flex-column">
+      <header>
+        <div class="container flex-column flex-left">
+          <h1>Max Chat</h1>
+          <p class="light-text">The easiest way to get your message across</p>
+        </div>
+      </header>
+
+      <div id="mainContent" class="container flex-grow-1 flex-column">
+        <section id="login">
+          <h2 class="text-center">Get Started</h2>
+          <form id="loginForm" class="flex">
+            <input
+              type="text"
+              name="username"
+              id="usernameInput"
+              placeholder="username"
+              class="flex-grow-1"
+            />
+            <button id="loginBtn">Chat!</button>
+          </form>
+        </section>
+
+        <section id="chat" class="hidden flex-grow-1 flex-column">
+          <div id="messagesList" class="flex-grow-1"></div>
+          <form id="messageForm" class="flex mb-2">
+            <input
+              type="text"
+              name="message"
+              id="messageInput"
+              placeholder="enter a message"
+              class="flex-grow-1"
+            />
+            <button id="sendBtn">Send</button>
+          </form>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
